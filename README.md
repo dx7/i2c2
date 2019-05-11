@@ -21,6 +21,8 @@ Otherwise, just run:
 If you have used i2cssh and want to migrate, you can do it painless using i2c2 version 0.99.0 which is 100% compatible with i2cssh 2.2.0 (latest version),
 including the config file ~/.i2csshrc.
 
+Version 0.99.1 is compatible with i2cssh branch master at the time of fork (commit: ac0bf90), including auto complete config file name i2cssh-autocomplete.bash.
+
 ## Usage
     Usage: i2c2 [options] [(username@host [username@host] | username@cluster)]
     -c, --clusters clus1,clus2       Comma-separated list of clusters specified in ~/.i2csshrc
