@@ -1,21 +1,28 @@
-# i2cssh
+# i2c2
 
-i2cssh is a csshX (http://code.google.com/p/csshx/) like tool for connecting over ssh to multiple machines. But instead of creating separate windows and having
-a master window for input, i2cssh uses iterm2 split panes and "Send input to all sessions" (cmd-shift-i) to send commands
-to all sessions.
+i2c2 is a csshX (http://code.google.com/p/csshx/) like tool for connecting over ssh to multiple machines. But instead of creating separate windows and having
+a master window for input, i2c2 uses iterm2 split panes and "Send input to all sessions" (cmd-shift-i) to send commands to all sessions.
+
+i2c2 is based on i2cssh which was a great project created by Wouter de Bie but unfortunately i2cssh had its latest release on July 15, 2016, almost 3 years ago.
+i2c2 is here just to keep i2cssh alive and up to date.
 
 ## Installing
 
-When using iTerm2 < 2.9, install i2cssh version 1.16.0:
+When using iTerm2 < 2.9, install old i2cssh version 1.16.0:
 
     $ gem install i2cssh -v 1.16.0
 
 Otherwise, just run:
 
-    $ gem install i2cssh
+    $ gem install i2c2
+
+## Migrate from i2cssh
+
+If you have used i2cssh and want to migrate, you can do it painless using i2c2 version 0.99.0 which is 100% compatible with i2cssh 2.2.0 (latest version),
+including the config file ~/.i2csshrc.
 
 ## Usage
-    Usage: i2cssh [options] [(username@host [username@host] | username@cluster)]
+    Usage: i2c2 [options] [(username@host [username@host] | username@cluster)]
     -c, --clusters clus1,clus2       Comma-separated list of clusters specified in ~/.i2csshrc
     -m, --machines a,b,c             Comma-separated list of hosts
     -f, --file FILE                  Cluster file (one hostname per line)
@@ -37,22 +44,22 @@ Otherwise, just run:
     -d, --direction DIRECTION        Direction that new sessions are created (default: column)
     -X, --extra EXTRA_PARAM          Additional ssh parameters (e.g. -Xi=myidentity.pem)
 
-i2cssh will assume you want to connect to a cluster when only one host is given.
+i2c2 will assume you want to connect to a cluster when only one host is given.
 
 For `-c` and `-m` options, the format `username@cluster` or `username@host` can be used.
 
 The following commands are exactly the same, however, they might serve different purposes:
 
-    $ i2cssh -m user1@host1,user2@host2
-    $ i2cssh user1@host1 user2@host2
+    $ i2c2 -m user1@host1,user2@host2
+    $ i2c2 user1@host1 user2@host2
 
 You can combine these options and use them multiple times:
 
-    $ i2cssh -m user1@host1,user2@host2 -m user3@host3 user4@host4 user5@host5
+    $ i2c2 -m user1@host1,user2@host2 -m user3@host3 user4@host4 user5@host5
 
 Using the `-l` option will override all usernames:
 
-    $ i2cssh -l foo user1@host1 user2@host2
+    $ i2c2 -l foo user1@host1 user2@host2
 
 This will connect to both `host1` and `host2` as the user `foo`
 
@@ -104,7 +111,7 @@ Enable SSH agent forwarding
 
 ### -l, --login LOGIN
 
-This option will override all logins passed in to i2cssh. This goes for global config, cluster config or username@host passed on the command line
+This option will override all logins passed in to i2c2. This goes for global config, cluster config or username@host passed on the command line
 
 ### -e, --environment KEY=VAL
 
@@ -124,7 +131,7 @@ Set the amount of columns. Can't be used in conjunction with -C
 
 ### -b, --broadcast
 
-Enable broadcast on startup. i2cssh will send cmd-shift-i to the window and press the OK button.
+Enable broadcast on startup. i2c2 will send cmd-shift-i to the window and press the OK button.
 
 ### -nb, --nobroadcast
 
@@ -140,7 +147,7 @@ Use iTerm2.app instead of iTerm.app
 
 ### -i, --itermname NAME
 
-Name of the application to use (default: iTerm). It happens sometimes iTerm isn't called iTerm. Use this parameter to override what app i2cssh interacts with.
+Name of the application to use (default: iTerm). It happens sometimes iTerm isn't called iTerm. Use this parameter to override what app i2c2 interacts with.
 
 ### -f, --file
 
@@ -176,7 +183,7 @@ Wait SLEEP seconds between starting each ssh session. This will take decimals as
 
 Set extra ssh parameters in the form -Xk=v. For example:
 
-    i2cssh -Xi=myidentity.pem
+    i2c2 -Xi=myidentity.pem
 
 will result in
 
@@ -184,7 +191,7 @@ will result in
 
 Or,
 
-    i2cssh -Xp=2222 -XL=8080:localhost:8080
+    i2c2 -Xp=2222 -XL=8080:localhost:8080
 
 will result in
 
@@ -195,9 +202,9 @@ will result in
 - Functional parity with csshX (as far as possible)
 - -X support in config file
 
-## Contributing to i2cssh
+## Contributing to i2c2
 
-I know that i2cssh doesn't have all the functionality of csshX, but either let me know what you really need or
+I know that i2c2 doesn't have all the functionality of csshX, but either let me know what you really need or
 fork, hack and create a pull request.
 
  * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
@@ -210,5 +217,4 @@ fork, hack and create a pull request.
 
 ## Copyright
 
-Copyright (c) 2011-2012 Wouter de Bie. See LICENSE.txt for
-further details.
+See LICENSE.txt for further details.

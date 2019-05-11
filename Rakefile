@@ -14,13 +14,13 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "i2cssh"
-  gem.homepage = "http://github.com/wouterdebie/i2cssh"
+  gem.name = "i2c2"
+  gem.homepage = "http://github.com/dx7/i2c2"
   gem.license = "MIT"
   gem.summary = %Q{csshX like cluster ssh using iTerm2 panes}
   gem.description = %Q{csshX like cluster ssh using iTerm2 panes}
-  gem.email = "wouter@evenflow.se"
-  gem.authors = ["Wouter de Bie"]
+  gem.email = "dx7@pm.me"
+  gem.authors = ["dx7", "Wouter de Bie"]
   # dependencies defined in Gemfile
   gem.add_dependency 'rb-scpt', "~> 1.0.1"
 end
@@ -40,7 +40,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "i2cssh #{version}"
+  rdoc.title = "i2c2 #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

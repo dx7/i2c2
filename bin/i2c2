@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'optparse'
-require_relative '../lib/i2cssh'
+require_relative '../lib/i2c2'
 require 'yaml'
 
 @config_file = File.expand_path "~/.i2csshrc"
@@ -295,4 +295,4 @@ if @servers.empty?
 end
 
 
-I2Cssh.new @servers, ssh_options, @i2_options, @ssh_environment
+I2c2.new @servers, ssh_options, @i2_options, @ssh_environment
