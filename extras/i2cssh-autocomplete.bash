@@ -1,6 +1,6 @@
 ###
-# autocomplete for i2cssh
-# To allow autocomplete, add  the following 
+# autocomplete for i2c2
+# To allow autocomplete, add  the following
 #   to your .bash_profile, .bashrc or .profile
 #  source [path to i2cssh-autocomplete.bash]
 #
@@ -14,4 +14,4 @@ _complete_i2cssh_hosts () {
     return 0
 }
 
-complete -F _complete_i2cssh_hosts i2cssh
+complete -F _complete_i2cssh_hosts i2c2
