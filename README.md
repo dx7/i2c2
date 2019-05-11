@@ -6,15 +6,15 @@ a master window for input, i2c2 uses iterm2 split panes and "Send input to all s
 i2c2 is based on i2cssh which was a great project created by Wouter de Bie but unfortunately i2cssh had its latest release on July 15, 2016, almost 3 years ago.
 i2c2 is here just to keep i2cssh alive and up to date.
 
-## Installing
+## Install
+
+Just run:
+
+    $ gem install i2c2
 
 When using iTerm2 < 2.9, install old i2cssh version 1.16.0:
 
     $ gem install i2cssh -v 1.16.0
-
-Otherwise, just run:
-
-    $ gem install i2c2
 
 ## Migrate from i2cssh
 
@@ -79,7 +79,15 @@ The `i2csshrc` file is a YAML formatted file that contains the following structu
           - host1
           - host2
 
-Optional parameters can be used globally or per cluster and include:
+## Autocomplete
+
+To allow autocomplete, add the following to your .bash_profile, .bashrc or .profile
+
+    $ source [path to ./extras/i2cssh-autocomplete.bash]
+
+## Optional Parameters
+
+They can be used globally or per cluster and include:
 
     broadcast: (true/false)     # Enable/disable broadcast on start
     login: <username>           # Use this username for login
