@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "i2c2"
   gem.homepage = "http://github.com/dx7/i2c2"
   gem.license = "MIT"
-  gem.summary = %Q{csshX like cluster ssh using iTerm2 panes}
-  gem.description = %Q{csshX like cluster ssh using iTerm2 panes}
+  gem.summary = %Q{csshX like - cluster ssh using iTerm2 panes - based on i2cssh}
+  gem.description = %Q{csshX like - cluster ssh using iTerm2 panes - based on i2cssh}
   gem.email = "dx7@pm.me"
   gem.authors = ["dx7", "Wouter de Bie"]
   # dependencies defined in Gemfile
