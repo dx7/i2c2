@@ -1,5 +1,11 @@
+PATH
+  remote: .
+  specs:
+    i2c2 (1.0.0.beta1)
+      rb-scpt (~> 1.0.1)
+
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
@@ -45,6 +51,7 @@ GEM
     public_suffix (2.0.5)
     rack (1.6.11)
     rake (12.3.2)
+    rb-scpt (1.0.3)
     rdoc (5.1.0)
     semver (1.0.1)
     shoulda (2.11.3)
@@ -56,6 +63,7 @@ PLATFORMS
 DEPENDENCIES
   builder
   bundler (>= 1.0.0)
+  i2c2!
   jeweler (= 2.1.2)
   shoulda
 
