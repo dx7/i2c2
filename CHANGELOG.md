@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [1.0.0.beta4] 2019-05-15
+### Changed
+- Fix problem after config file convertion to version 2
+
 ## [1.0.0.beta3] 2019-05-15
 ### Changed
 - Fix a circular dependency between i2c2 and i2c2
