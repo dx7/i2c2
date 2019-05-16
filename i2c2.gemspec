@@ -20,7 +20,6 @@ Gem::Specification.new do |s|
     "README.md"
   ]
   s.files = [
-    ".document",
     "CHANGELOG.md",
     "Gemfile",
     "Gemfile.lock",
