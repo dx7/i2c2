@@ -1,6 +1,15 @@
 source "https://rubygems.org"
+# Add dependencies required to use your gem here.
+# Example:
+#   gem "activesupport", ">= 2.3.5"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+gem "rb-scpt", "~> 1.0.1"
 
-# Specify your gem's dependencies in servers_dashboard_client.gemspec
-gemspec
+# Add dependencies to develop your gem here.
+# Include everything needed to run rake, tests, features, etc.
+group :development do
+  gem "bundler", ">= 1.0.0"
+  gem "jeweler", "2.1.2"
+  gem "shoulda"
+  gem "builder"
+end
