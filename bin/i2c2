@@ -8,6 +8,19 @@ require 'yaml'
 
 @i2_options, ssh_options, @servers, @clusters, @ssh_environment, opts_from_cmdline = [], [], [], {}, [], {}
 
+def debug_vars
+  p '-----------------------------'
+  p '@i2_options'
+  p @i2_options
+  p '@servers'
+  p @servers
+  p '@clusters'
+  p @clusters
+  p '@ssh_environment'
+  p @ssh_environment
+  p '-----------------------------'
+end
+
 def get_hosts(c)
     c.each do |clus|
 
