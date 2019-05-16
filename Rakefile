@@ -21,8 +21,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{csshX like - cluster ssh using iTerm2 panes - based on i2cssh}
   gem.email = "dx7@pm.me"
   gem.authors = ["dx7", "Wouter de Bie"]
-  # dependencies defined in Gemfile
-  gem.add_dependency 'rb-scpt', "~> 1.0.1"
+  # dependencies are defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
 
