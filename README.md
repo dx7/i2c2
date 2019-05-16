@@ -18,7 +18,7 @@ When using iTerm2 < 2.9, install old i2cssh version 1.16.0:
 
 ## Migrate from i2cssh
 
-If you have used i2cssh and want to migrate, you can do it painless using i2c2 version 0.99.0 which is 100% compatible with i2cssh 2.2.0 (latest version),
+If you have used i2cssh and want to migrate, you can do it painless using i2c2 version 0.99.0 which is 100% compatible with i2cssh 2.2.0 (latest release),
 including the config file ~/.i2csshrc.
 
 Version 0.99.1 is compatible with i2cssh branch master at the time of fork (commit: ac0bf90), including auto complete config file name i2cssh-autocomplete.bash.
@@ -79,12 +79,6 @@ The `i2csshrc` file is a YAML formatted file that contains the following structu
           - host1
           - host2
 
-## Autocomplete
-
-To allow autocomplete, add the following to your .bash_profile, .bashrc or .profile
-
-    $ source [path to ./extras/i2cssh-autocomplete.bash]
-
 ## Optional Parameters
 
 They can be used globally or per cluster and include:
@@ -112,6 +106,12 @@ The following precedence is used:
 `global options from config` < `cluster options from config` < `command line flags`
 
 Make sure the config file is valid YAML (e.g. use spaces instead of tabs)
+
+## Autocomplete
+
+To allow autocomplete, add the following to your .bash_profile, .bashrc or .profile
+
+    $ source [path to ./extras/i2cssh-autocomplete.bash]
 
 ## Options
 
