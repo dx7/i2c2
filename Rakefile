@@ -42,5 +42,6 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "i2c2 #{version}"
   rdoc.rdoc_files.include('README*')
+  rdoc.rdoc_files.include('CHANGELOG*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

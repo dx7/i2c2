@@ -2,7 +2,11 @@
 
 ## [Unreleased]
 
-## [1.0.0.alpha1] 2019-05-11
+## [1.0.0.beta2] 2019-05-15
+### Changed
+- Fix merge error on "-m" option [beta1 failed]
+
+## [1.0.0.beta1] 2019-05-11
 ### Changed
 - Fix merge error on "-m" option
 
