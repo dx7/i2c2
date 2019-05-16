@@ -69,19 +69,18 @@ def set_options(config_hash, login_override=nil)
 end
 
 if File.exists?(@config_file)
-    config_hash = YAML.load File.read @config_file
+  config_hash = YAML.load(File.read(@config_file))
 
-    # Read config and set defaults from config
-    if config_hash["version"] && config_hash["version"].to_i >= 2
-        set_options(config_hash)
-        @clusters = config_hash["clusters"]
-    else
-        # Convert version 1 format to version 2
-        @clusters = config_hash["clusters"].inject({}){|m, c| m[c[0]] = {"hosts" => c[1]}; m}
-    end
+  if config_hash["version"] && config_hash["version"].to_i < 2
+    # Convert version 1 format to version 2
+    @clusters = config_hash["clusters"].inject({}) { |m, c| m[c[0]] = { "hosts" => c[1] }; m }
+  end
 
+  # Read config and set defaults from config
+  set_options(config_hash)
+  @clusters = config_hash["clusters"]
 else
-    set_options({})
+  set_options({})
 end
 
 
