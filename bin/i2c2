@@ -249,36 +249,6 @@ if opts_from_cmdline[:tabs]
     opts_from_cmdline[:broadcast] = false
 end
 
-# One argument = one cluster
-if ARGV.length == 1
-    c = [ARGV[0]]
-    get_hosts(c)
-
-# Otherwise we have a list of hosts
-elsif ARGV.length > 1
-    if opts_from_cmdline[:tabs_nogroup]
-        ARGV.each do |serv|
-            @servers << [serv]
-                @i2_options << @i2_options.first.clone
-                if @ssh_environment.empty?
-                    @ssh_environment << {}
-                else
-                    @ssh_environment << @ssh_environment.first.clone
-                end
-        end
-    else
-        @servers << ARGV
-        if @i2_options.size > 1 # We added stuff in with cmdline options
-            @i2_options << @i2_options.first.clone
-            if @ssh_environment.empty?
-                @ssh_environment << {}
-            else
-                @ssh_environment << @ssh_environment.first.clone
-            end
-        end
-    end
-end
-
 # Drop default options
 if @i2_options.size > @servers.size
     @i2_options.shift

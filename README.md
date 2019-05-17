@@ -46,18 +46,7 @@ Version 0.99.1 is compatible with i2cssh branch master at the time of fork (comm
     -d, --direction DIRECTION        Direction that new sessions are created (default: column)
     -X, --extra EXTRA_PARAM          Additional ssh parameters (e.g. -Xi=myidentity.pem)
 
-i2c2 will assume you want to connect to a cluster when only one host is given.
-
 For `-c` and `-m` options, the format `username@cluster` or `username@host` can be used.
-
-The following commands are exactly the same, however, they might serve different purposes:
-
-    $ i2c2 -m user1@host1,user2@host2
-    $ i2c2 user1@host1 user2@host2
-
-You can combine these options and use them multiple times:
-
-    $ i2c2 -m user1@host1,user2@host2 -m user3@host3 user4@host4 user5@host5
 
 Using the `-l` option will override all usernames:
 
