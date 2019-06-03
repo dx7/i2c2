@@ -28,9 +28,8 @@ class I2c2
       @i2_options.shift
       @ssh_environment.shift
 
-      if !@servers.empty?  && i2_options.first[:tabs] then
-        # @iterm.create_tab(@profile)
-        @window.create_tab_with_default_profile()
+      if !@servers.empty? && i2_options.first[:tabs]
+        @window.create_tab_with_default_profile
         @session_index = 0
       end
     end
@@ -62,9 +61,9 @@ class I2c2
         @columns = @i2_options.first[:columns]
       end
 
-      if @rows then
+      if @rows
         @columns = (count / @rows.to_f).ceil
-      elsif @columns then
+      elsif @columns
         @rows = (count / @columns.to_f).ceil
       else
         @columns = Math.sqrt(count).ceil
@@ -73,7 +72,7 @@ class I2c2
 
       # Quick hack: iTerms default window only supports up to 11 rows and 22 columns
       # If we surpass either one, we resort to full screen.
-      if @rows > 11 or @columns > 22 then
+      if @rows > 11 or @columns > 22
         @i2_options.first[:fullscreen] = true
       end
     end
@@ -140,19 +139,19 @@ class I2c2
           server = @servers.first[i-old_size-1]
         end
 
-        if server then
+        if server
           send_env = ''
 
-          if @i2_options.first[:rank] then
+          if @i2_options.first[:rank]
             @ssh_environment.first['LC_RANK'] = i-1
           end
 
-          if !@ssh_environment.empty? && !@ssh_environment.first.empty? then
+          if !@ssh_environment.empty? && !@ssh_environment.first.empty?
             send_env = "-o SendEnv=#{@ssh_environment.first.keys.join(',')}"
             session.write :text => "#{@ssh_environment.first.map{|k,v| "export #{k}=#{v}"}.join('; ')}"
           end
 
-          if @i2_options.first[:sleep] then
+          if @i2_options.first[:sleep]
             sleep @i2_options.first[:sleep] * i
           end
 
