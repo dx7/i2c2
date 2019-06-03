@@ -130,12 +130,18 @@ optparse = OptionParser.new do |opts|
   opts.on '-t', '--tab-split',
     'Split servers/clusters into tabs (group arguments)' do
     opts_from_cmdline[:tabs] = true
+
+    puts 'Disabling broadcast for tab split mode...'
+    opts_from_cmdline[:broadcast] = false
   end
 
   opts.on '-T', '--tab-split-nogroup',
     'Split servers/clusters into tabs (don\'t group arguments)' do
     opts_from_cmdline[:tabs] = true
     opts_from_cmdline[:tabs_nogroup] = true
+
+    puts 'Disabling broadcast for tab split mode...'
+    opts_from_cmdline[:broadcast] = false
   end
 
   # Command line options override config file
@@ -249,11 +255,6 @@ optparse = OptionParser.new do |opts|
 end
 
 optparse.parse!
-
-if opts_from_cmdline[:tabs]
-  puts 'Disabling broadcast for tab split mode...'
-  opts_from_cmdline[:broadcast] = false
-end
 
 # Drop default options
 if @i2_options.size > @servers.size
