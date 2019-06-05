@@ -1,7 +1,7 @@
 # encoding: utf-8
-
 require 'rubygems'
 require 'bundler'
+
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
@@ -9,13 +9,14 @@ rescue Bundler::BundlerError => e
   $stderr.puts "Run `bundle install` to install missing gems"
   exit e.status_code
 end
-require 'rake'
 
+require 'rake'
 require 'jeweler'
+
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "i2c2"
-  gem.homepage = "http://github.com/dx7/i2c2"
+  gem.homepage = "https://github.com/dx7/i2c2"
   gem.license = "MIT"
   gem.summary = %Q{csshX like - cluster ssh using iTerm2 panes - based on i2cssh}
   gem.description = %Q{csshX like - cluster ssh using iTerm2 panes - based on i2cssh}
