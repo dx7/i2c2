@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["dx7", "Wouter de Bie"]
-  s.date = "2019-05-16"
+  s.date = "2019-06-05"
   s.description = "csshX like - cluster ssh using iTerm2 panes - based on i2cssh"
   s.email = "dx7@pm.me"
   s.executables = ["i2c2"]
@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
     "test/helper.rb",
     "test/test_i2c2.rb"
   ]
-  s.homepage = "http://github.com/dx7/i2c2"
+  s.homepage = "https://github.com/dx7/i2c2"
   s.licenses = ["MIT"]
   s.rubygems_version = "3.0.3"
   s.summary = "csshX like - cluster ssh using iTerm2 panes - based on i2cssh"
@@ -44,23 +44,14 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<rb-scpt>, ["~> 1.0.1"])
-      s.add_development_dependency(%q<bundler>, [">= 1.0.0"])
-      s.add_development_dependency(%q<jeweler>, ["= 2.1.2"])
-      s.add_development_dependency(%q<shoulda>, [">= 0"])
-      s.add_development_dependency(%q<builder>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
     else
       s.add_dependency(%q<rb-scpt>, ["~> 1.0.1"])
-      s.add_dependency(%q<bundler>, [">= 1.0.0"])
-      s.add_dependency(%q<jeweler>, ["= 2.1.2"])
-      s.add_dependency(%q<shoulda>, [">= 0"])
-      s.add_dependency(%q<builder>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
     end
   else
     s.add_dependency(%q<rb-scpt>, ["~> 1.0.1"])
-    s.add_dependency(%q<bundler>, [">= 1.0.0"])
-    s.add_dependency(%q<jeweler>, ["= 2.1.2"])
-    s.add_dependency(%q<shoulda>, [">= 0"])
-    s.add_dependency(%q<builder>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
   end
 end
 
