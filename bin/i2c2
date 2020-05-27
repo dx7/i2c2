@@ -49,7 +49,7 @@ def set_options(config_hash, login_override=nil)
   end
 
   @i2_options.last[:login] = login_override if login_override
-  @i2_options.last[:direction] ||= :column
+  @i2_options.last[:direction] ||= :row
   @i2_options.last[:direction] = @i2_options.last[:direction].to_sym
   if config_hash['environment']
     if @ssh_environment.empty?
