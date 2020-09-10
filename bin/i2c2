@@ -219,7 +219,7 @@ optparse = OptionParser.new do |opts|
   end
 
   opts.on '-d', '--direction DIRECTION', String,
-    'Direction that new sessions are created (default: column)' do |d|
+    'Direction that new sessions are created (default: row)' do |d|
     unless ['row', 'column'].include?(d)
       puts 'ERROR: -d requires \'row\' or \'column\''
       puts optparse.help
