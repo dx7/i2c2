@@ -58,6 +58,3 @@ PLATFORMS
 DEPENDENCIES
   jeweler
   rb-scpt (~> 1.0.1)
-
-BUNDLED WITH
-   1.17.3
