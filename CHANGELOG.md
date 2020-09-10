@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.0.0.beta5] 2020-09-10
+### Changed
+- Remove support for connecting to cluster/hosts without using the explicit option
+- Change default direction from column to row
+
 ## [1.0.0.beta4] 2019-05-15
 ### Changed
 - Fix problem after config file convertion to version 2
