@@ -50,7 +50,7 @@ GEM
     rake (13.0.3)
     rb-scpt (1.0.3)
     rchardet (1.8.0)
-    rdoc (6.3.0)
+    rdoc (6.3.2)
     semver2 (3.4.2)
     thread_safe (0.3.6)
 
