@@ -1,3 +1,12 @@
+# DEPRECATED
+
+This fork had been created to fix some bugs. However the original
+project has been rewrite to use the new Python API of iTerm2. It 
+doesn't rely on any weird AppleScript and should be a bit faster
+in generating the ssh windows. Then you should use the original
+[i2cssh](https://github.com/wouterdebie/i2cssh) again.
+
+
 # i2c2
 
 i2c2 is a csshX (http://code.google.com/p/csshx/) like tool for connecting over ssh to multiple machines. But instead of creating separate windows and having
